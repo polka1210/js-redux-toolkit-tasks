@@ -2,11 +2,9 @@ import React from 'react';
 import Spinner from './Spinner.jsx';
 import TodoForm from './TodoForm.jsx';
 // BEGIN (write your solution here)
-import { 
-  useGetTasksQuery, 
-  useAddTaskMutation, 
-  useDeleteTaskMutation 
-} from '../services/tasksApi.js';
+ const { data: tasks = [], isLoading } = useGetTasksQuery();
+  const [addTask] = useAddTaskMutation();
+  const [deleteTask] = useDeleteTaskMutation();
 // END
 
 const TodoBox = () => {
