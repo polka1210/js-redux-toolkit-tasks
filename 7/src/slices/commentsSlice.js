@@ -15,8 +15,9 @@ const commentsSlice = createSlice({
 
 export const { actions } = commentsSlice;
 
-export const { selectAll: selectAllComments, selectById: selectCommentById } = 
-  commentsAdapter.getSelectors((state) => state.comments);
+export const selectors = commentsAdapter.getSelectors(
+  (state) => state.commentsReducer
+);
 
 export default commentsSlice.reducer;
 // END

@@ -16,8 +16,9 @@ const postsSlice = createSlice({
 
 export const { actions } = postsSlice;
 
-export const { selectAll: selectAllPosts, selectById: selectPostById } = 
-  postsAdapter.getSelectors((state) => state.posts);
+export const selectors = postsAdapter.getSelectors(
+  (state) => state.postsReducer
+);
 
 export default postsSlice.reducer;
 // END
