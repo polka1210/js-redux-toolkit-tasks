@@ -9,7 +9,8 @@ const Comment = ({ commentId }) => {
 
   const author = useSelector((state) => 
     state.usersReducer.users.find((u) => u.id === comment?.author)
-  );D
+  );
+  // END
 
   if (!author || !comment) {
     return null;
