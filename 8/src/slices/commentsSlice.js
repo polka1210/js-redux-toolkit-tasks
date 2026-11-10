@@ -14,7 +14,7 @@ const commentsSlice = createSlice({
     addComment: commentsAdapter.addOne,
   },
   // BEGIN (write your solution here)
-extraReducers: (builder) => {
+ extraReducers: (builder) => {
     builder
       .addCase(usersActions.removeUser, (state, { payload }) => {
         const remainingComments = Object.values(state.entities).filter(
@@ -24,7 +24,7 @@ extraReducers: (builder) => {
       })
       .addCase(postsActions.removePost, (state, { payload }) => {
         const remainingComments = Object.values(state.entities).filter(
-          (comment) => comment.postId !== payload.id
+          (comment) => comment.postId != payload.id
         );
         commentsAdapter.setAll(state, remainingComments);
       });
