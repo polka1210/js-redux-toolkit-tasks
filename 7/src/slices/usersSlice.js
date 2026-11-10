@@ -7,6 +7,7 @@ const usersSlice = createSlice({
   name: "users",
   initialState: usersAdapter.getInitialState(),
   reducers: {
+    setUsers: usersAdapter.setAll,
     addUsers: usersAdapter.addMany,
   },
 });

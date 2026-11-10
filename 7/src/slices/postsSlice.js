@@ -7,6 +7,7 @@ const postsSlice = createSlice({
   name: "posts",
   initialState: postsAdapter.getInitialState(),
   reducers: {
+    setPosts: postsAdapter.setAll,
     addPost: postsAdapter.addOne,
     addPosts: postsAdapter.addMany,
     updatePost: postsAdapter.updateOne,

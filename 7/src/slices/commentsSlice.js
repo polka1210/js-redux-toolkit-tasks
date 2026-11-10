@@ -7,6 +7,7 @@ const commentsSlice = createSlice({
   name: "comments",
   initialState: commentsAdapter.getInitialState(),
   reducers: {
+    setComments: commentsAdapter.setAll,
     addComment: commentsAdapter.addOne,
     addComments: commentsAdapter.addMany,
   },
