@@ -11,12 +11,8 @@ const commentsSlice = createSlice({
   reducers: {
     setComments(state, { payload }) {
       // BEGIN (write your solution here)
- const commentsArray = Object.values(payload); // превращаем объект в массив
-      state.ids = commentsArray.map((comment) => comment.id);
-      state.entities = commentsArray.reduce((acc, comment) => {
-        acc[comment.id] = comment;
-        return acc;
-      }, {});
+ state.ids = payload.ids;
+      state.entities = payload.entities;
     },
   },
 });
