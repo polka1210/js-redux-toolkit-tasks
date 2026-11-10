@@ -8,7 +8,7 @@ import { fetchTasks, removeTask } from "../slices/tasksSlice.js";
 const Tasks = () => {
   const dispatch = useDispatch();
   // BEGIN (write your solution here)
- const tasks = useSelector((state) => state.tasksReducer.items);
+ const tasks = useSelector((state) => state.tasks.items);
 
   useEffect(() => {
     dispatch(fetchTasks());
