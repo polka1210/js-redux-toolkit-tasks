@@ -7,16 +7,16 @@ const commentsSlice = createSlice({
   name: "comments",
   initialState: commentsAdapter.getInitialState(),
   reducers: {
-    setComments: commentsAdapter.setAll,
     addComment: commentsAdapter.addOne,
     addComments: commentsAdapter.addMany,
+    setComments: commentsAdapter.setAll,
   },
 });
 
 export const { actions } = commentsSlice;
 
 export const { selectAll: selectAllComments, selectById: selectCommentById } = 
-  commentsAdapter.getSelectors((state) => state.commentsReducer);
+  commentsAdapter.getSelectors((state) => state.comments);
 
 export default commentsSlice.reducer;
 // END

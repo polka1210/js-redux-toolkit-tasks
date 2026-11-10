@@ -7,9 +7,9 @@ const postsSlice = createSlice({
   name: "posts",
   initialState: postsAdapter.getInitialState(),
   reducers: {
-    setPosts: postsAdapter.setAll,
     addPost: postsAdapter.addOne,
     addPosts: postsAdapter.addMany,
+    setPosts: postsAdapter.setAll,
     updatePost: postsAdapter.updateOne,
   },
 });
@@ -17,7 +17,7 @@ const postsSlice = createSlice({
 export const { actions } = postsSlice;
 
 export const { selectAll: selectAllPosts, selectById: selectPostById } = 
-  postsAdapter.getSelectors((state) => state.postsReducer);
+  postsAdapter.getSelectors((state) => state.posts);
 
 export default postsSlice.reducer;
 // END
